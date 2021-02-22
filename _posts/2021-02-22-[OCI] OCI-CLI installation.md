@@ -25,7 +25,7 @@ Enter a location for your config [/root/.oci/config]:
 Enter a user OCID: <strong><span style="color: #FF0000;">ocid1.user.oc1..aaaaa----------------------k2kdj47itn3ploa</span></strong>
 Enter a tenancy OCID: <strong><span style="color: #FF0000;">ocid1.tenancy.oc1..aaaa-----------------------ymvxiq</span></strong>
 Enter a region (e.g. eu-frankfurt-1, uk-london-1, us-ashburn-1): <strong><span style="color: #FF0000;">ap-seoul-1</span></strong>
-Do you want to generate a new RSA key pair? (If you decline you will be asked to supply the path to an existing key.) [Y/n]: <strong><span style="color: #FF0000;">Y</span></strong></p>
+Do you want to generate a new RSA key pair? (If you decline you will be asked to supply the path to an existing key.) [Y/n]: <strong><span style="color: #FF0000;">Y</span></strong>
 Enter a directory for your keys to be created [/root/.oci]:
 Enter a name for your key [oci_api_key]:
 Public key written to: /root/.oci/oci_api_key_public.pem
@@ -34,7 +34,7 @@ Private key written to: /root/.oci/oci_api_key.pem
 Fingerprint: c5:93:32:d6:db:e3:86:ff:d5:da:ce:72:11:47:e4:73
 Config written to /root/.oci/config
 &nbsp; If you haven't already uploaded your public key through the console,
-&nbsp; follow the instructions on the page linked below in the section 'How to upload the public key':</p>
+&nbsp; follow the instructions on the page linked below in the section 'How to upload the public key':
 &nbsp; https://docs.ap-seoul-1.oraclecloud.com/Content/API/Concepts/apisigningkey.htm#How2
 </pre>
 <p>아래와 같은 정보를 요구합니다.<br />1) User OCID<br />2) Tenancy OCID<br />3) Region (예: ap-seoul-1)<br />4) CLI를 위한 key pair 생성 여부<br />- "<span style="color: #fe0000;">Y</span>" 선택하면 자동으로 key pair 가 생성되며, public key는 OCI -&gt; IAM -&gt; User 에서 등록 해야 합니다.<br />- 생성된 public key 파일 명은 oci_api_key_public.pem</p>
