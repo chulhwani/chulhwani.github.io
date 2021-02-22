@@ -9,7 +9,7 @@
 </div>
 <p>설치가 시작되면 설치 경로를 입력하라고 나오는데, 기본 경로로 설치합니다. (계속해서 엔터)</p>
 <p>&nbsp;</p>
-<strong>2. OCI-CLI Setup</strong></p>
+<strong>2. OCI-CLI Setup</strong>
 <p>$ su - root</p>
 <p>$ oci setup config&nbsp; &nbsp; =&gt; /root/bin/oci setup config</p>
 <p>위와 같이 실행하면 ~/.oci 디렉토리에 config 파일이 생성됩니다.</p>
