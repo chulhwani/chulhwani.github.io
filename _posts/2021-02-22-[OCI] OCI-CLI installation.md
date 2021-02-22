@@ -13,11 +13,7 @@
 <p>$ su - root</p>
 <p>$ oci setup config&nbsp; &nbsp; =&gt; /root/bin/oci setup config</p>
 <p>위와 같이 실행하면 ~/.oci 디렉토리에 config 파일이 생성됩니다.</p>
-<table>
-<tbody>
-<tr>
-<td width="697">
-<p>[root@chulhwani ~]# /root/bin/oci setup config</p>
+<pre class="highlight"><code>[root@chulhwani ~]# /root/bin/oci setup config</p>
 <p>&nbsp;&nbsp;&nbsp; This command provides a walkthrough of creating a valid CLI config file.</p>
 <p>&nbsp;&nbsp;&nbsp; The following links explain where to find the information required by this</p>
 <p>&nbsp;&nbsp;&nbsp; script:</p>
@@ -49,10 +45,7 @@
 <p>&nbsp;&nbsp;&nbsp; upload the public key':</p>
 <p>&nbsp;</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; https://docs.ap-seoul-1.oraclecloud.com/Content/API/Concepts/apisigningkey.htm#How2</p>
-</td>
-</tr>
-</tbody>
-</table>
+</code></pre>
 <p>아래와 같은 정보를 요구합니다.<br />1) User OCID<br />2) Tenancy OCID<br />3) Region (예: ap-seoul-1)<br />4) CLI를 위한 key pair 생성 여부<br />- "<span style="color: #fe0000;">Y</span>" 선택하면 자동으로 key pair 가 생성되며, public key는 OCI -&gt; IAM -&gt; User 에서 등록 해야 합니다.<br />- 생성된 public key 파일 명은 oci_api_key_public.pem</p>
 <p>&nbsp;</p>
 <p><strong>3. Verifying OCI-CLI</strong></p>
