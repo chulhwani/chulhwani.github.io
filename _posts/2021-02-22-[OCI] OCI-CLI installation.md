@@ -43,3 +43,6 @@ Fingerprint: c5:93:32:d6:db:e3:86:ff:d5:da:ce:72:11:47:e4:73
 <pre class="highlight">[root@chulhwani ~]# /root/bin/oci os ns get
 {<br />&nbsp; "data": "cnuwdlyf6mlc"<br />}
 </pre>
+<p>&nbsp;</p>
+<p><strong>참고 URL</strong></p>
+<a href="https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm" target="_blank">OCI CLI Quickstart
