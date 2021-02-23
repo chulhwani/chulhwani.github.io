@@ -154,5 +154,15 @@ Hint: Some lines were ellipsized, use -l to show in full.
 <p>&nbsp;</p>
 <p><strong><font size="4">5. Docker 관리</font></strong></p>
 <pre class="highlight"><code>[root@docker-server ~]# systemctl enable docker.service  # 부팅시에 자동 Docker Daemon 시작
+<p>&nbsp;</p>
+[root@docker-server ~]# sudo docker login   #도커 hub 사용을 위한 계정생성
+Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+Username: chulhwani
+Password:
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
 </code>
 </pre>
