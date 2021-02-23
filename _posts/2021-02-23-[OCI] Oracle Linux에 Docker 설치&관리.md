@@ -321,14 +321,18 @@ golang              1.11-alpine         e116d2efa2ab        18 months ago       
 [root@docker-server hostname_finder]# docker run --name goapp-project -p 8080:8080 -d goapp
 729f55251fd6a7b88bdf680fac8486be8206780fab58afd3b8545c6823e2c059
 
-<b># Docker Container Service 확인</b>
+<b># Container Service 확인</b>
 [root@docker-server hostname_finder]# curl localhost:8080
 hostname: 729f55251fd6
 
-<b># Docker Process 확인</b>
+<b># Container List 조회</b>
+[root@docker-server hostname_finder]# docker container ls
 [root@docker-server hostname_finder]# docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                    NAMES
 729f55251fd6        goapp               "/bin/demo"         21 seconds ago      Up 18 seconds       0.0.0.0:8080->8080/tcp   goapp-project
+
+<b># 전체 Container List 조회</b>
+[root@docker-server hostname_finder]# docker ps -a
 
 <b># Docker Process 상세정보 확인</b>
 [root@docker-server hostname_finder]# docker inspect goapp-project
@@ -601,6 +605,25 @@ Deleted: sha256:03901b4a2ea88eeaad62dbe59b072b28b6efa00491962b8741081c5df50c65e0
 <b># Docker Image 확인</b>
 [root@docker-server hostname_finder]# docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+</code></pre>
+</div>
+</div>
+<p>&nbsp;</p>
+<strong><font size="4">8. Docker Instance 중지 및 삭제</font></strong>
+<div style="white-space:nowrap; overflow:auto;" class="language-plaintext highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>
+<b># Docker Hub에 image upload</b>
+[root@docker-server ~]# docker login --username chulhwani
+[root@docker-server ~]# docker push chulhwani/goapp
+The push refers to repository [docker.io/chulhwani/goapp]
+cc282a374c26: Pushed
+latest: digest: sha256:b18b5ff03599893a7361feda054ebe26de61a71f019dc8725bb33d87f2115968 size: 528
+
+<b># Docker Hub의 image로 Container 실행</b>
+[root@docker-server ~]# docker run --name goapp-project -p 8080:8080 -d chulhwani/goapp
+CONTAINER ID        IMAGE                   COMMAND                  CREATED             STATUS              PORTS                    NAMES
+0938068f8709        chulhwani/goapp          "/bin/demo"              5 seconds ago       Up 4 seconds        0.0.0.0:8080->8080/tcp   goapp-project
 </code></pre>
 </div>
 </div>
