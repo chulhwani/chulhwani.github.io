@@ -565,8 +565,8 @@ latest: digest: sha256:b18b5ff03599893a7361feda054ebe26de61a71f019dc8725bb33d87f
 
 <b># Docker Hub의 image로 Container 실행</b>
 [root@docker-server ~]# docker run --name goapp-project -p 8080:8080 -d chulhwani/goapp
-CONTAINER ID        IMAGE                   COMMAND                  CREATED             STATUS              PORTS                    NAMES
-0938068f8709        chulhwani/goapp          "/bin/demo"              5 seconds ago       Up 4 seconds        0.0.0.0:8080->8080/tcp   goapp-project
+CONTAINER ID   IMAGE            COMMAND      CREATED        STATUS         PORTS                   NAMES
+0938068f8709   chulhwani/goapp  "/bin/demo"  5 seconds ago  Up 4 seconds   0.0.0.0:8080->8080/tcp  goapp-project
 </code></pre>
 </div>
 </div>
