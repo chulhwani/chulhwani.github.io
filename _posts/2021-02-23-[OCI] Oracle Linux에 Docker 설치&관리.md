@@ -152,6 +152,10 @@ Feb 23 00:32:33 docker-server dockerd[32222]: time="2021-02-23T00:32:33.80707046
 Hint: Some lines were ellipsized, use -l to show in full.
 <code></pre>
 <p>&nbsp;</p>
-<p><strong><font size="4">5. Docker 관리</font></strong></p>
+<p><strong>5. Docker 관리</strong></p>
+<div class="language-plaintext highlighter-rouge">
+<div class="highlight">
 <pre class="highlight"><code>[root@docker-server ~]# systemctl enable docker.service  # 부팅시에 자동 Docker Daemon 시작
-<code></pre>
+</code></pre>
+</div>
+</div>
