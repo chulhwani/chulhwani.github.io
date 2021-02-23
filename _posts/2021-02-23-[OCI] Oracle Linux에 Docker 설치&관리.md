@@ -153,13 +153,13 @@ Hint: Some lines were ellipsized, use -l to show in full.
 </code></pre>
 <p>&nbsp;</p>
 <p><strong><font size="4">5. Docker 관리</font></strong></p>
-<div class="language-plaintext highlighter-rouge">
+<div style="overflow:auto; width:400px; height:150px; class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight"><code>
-# 부팅시 자동 Docker Daemon 시작
+<b># 부팅시 자동 Docker Daemon 시작</b>
 [root@docker-server ~]# systemctl enable docker.service
 
-# Docker Hub 사용을 위한 계정생성
+<b># Docker Hub 사용을 위한 계정생성</b>
 [root@docker-server ~]# sudo docker login
 Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
 Username: chulhwani
@@ -170,7 +170,7 @@ https://docs.docker.com/engine/reference/commandline/login/#credentials-store
 
 Login Succeeded
 
-# Docker Image 검색
+<b># Docker Image 검색</b>
 [root@docker-server ~]# sudo docker search nginx
 INDEX         NAME                              DESCRIPTION                                     STARS   OFFICIAL   AUTOMATED
 docker.io     nginx                             Official build of Nginx.                        14466   [OK]      
