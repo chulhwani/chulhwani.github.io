@@ -71,23 +71,18 @@ $ code .
 git init
 git add README.md
 git commit -m "first commit"
-git remote add origin https://github.com/akkias/HTML-Basics.git
+git remote add origin https://github.com/chulhwani/HTML-Basics.git
 git push -u origin mastertouch README.md
 git init
 git add README.md
 git commit -m "first commit"
-git remote add origin https://github.com/akkias/HTML-Basics.git
+git remote add origin https://github.com/chulhwani/HTML-Basics.git
 git push -u origin mastertouch README.md
 git init
 git add README.md
 git commit -m "first commit"
-git remote add origin https://github.com/akkias/HTML-Basics.git
+git remote add origin https://github.com/chulhwani/HTML-Basics.git
 git push -u origin mastertouch README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/akkias/HTML-Basics.git
-git push -u origin master
 </code></pre>
 </div>
 </div>
