@@ -393,6 +393,8 @@ nginx               latest              35c43ace9216        5 days ago          
 golang              1.11-alpine         e116d2efa2ab        18 months ago       312MB
 </code></pre>
 <strong><font size="4">7. Docker Container 시작/확인</font></strong>
+<div class="language-plaintext highlighter-rouge">
+<div class="highlight">
 <pre class="highlight"><code>
 <b># Docker Container 시작</b>
 [root@docker-server hostname_finder]# docker run --name goapp-project -p 8080:8080 -d goapp
@@ -674,3 +676,5 @@ Deleted: sha256:03901b4a2ea88eeaad62dbe59b072b28b6efa00491962b8741081c5df50c65e0
 [root@docker-server hostname_finder]# docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 </code></pre>
+</div>
+</div>
