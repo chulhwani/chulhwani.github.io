@@ -126,7 +126,8 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service 
 <p>&nbsp;</p>
 <p><strong><font size="4">4. Docker Service 확인</font></strong></p>
 <pre class="highlight"><code>[root@docker-server ~]# docker -v
-Docker version 19.03.11-ol, build f0aae77<p>
+Docker version 19.03.11-ol, build f0aae77
+
 [root@docker-server ~]# systemctl status docker
  docker.service - Docker Application Container Engine
    Loaded: loaded (/usr/lib/systemd/system/docker.service; enabled; vendor preset: disabled)
@@ -149,14 +150,17 @@ Feb 23 00:32:33 docker-server dockerd[32222]: time="2021-02-23T00:32:33.72201156
 Feb 23 00:32:33 docker-server systemd[1]: Started Docker Application Container Engine.
 Feb 23 00:32:33 docker-server dockerd[32222]: time="2021-02-23T00:32:33.807070467Z" level=info msg="API listen on /var/run/docker.sock"
 Hint: Some lines were ellipsized, use -l to show in full.
-<code></pre>
+</code></pre>
 <p>&nbsp;</p>
 <p><strong><font size="4">5. Docker 관리</font></strong></p>
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
-<pre class="highlight"><code>[root@docker-server ~]# systemctl enable docker.service  # 부팅시에 자동 Docker Daemon 시작
-<p>&nbsp;</p>
-[root@docker-server ~]# sudo docker login   #도커 hub 사용을 위한 계정생성
+<pre class="highlight"><code>
+# 부팅시 자동 Docker Daemon 시작
+[root@docker-server ~]# systemctl enable docker.service
+
+# Docker Hub 사용을 위한 계정생성
+[root@docker-server ~]# sudo docker login
 Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
 Username: chulhwani
 Password:
@@ -165,6 +169,35 @@ Configure a credential helper to remove this warning. See
 https://docs.docker.com/engine/reference/commandline/login/#credentials-store
 
 Login Succeeded
+
+# Docker Image 검색
+[root@docker-server ~]# sudo docker search nginx
+INDEX         NAME                              DESCRIPTION                                     STARS   OFFICIAL   AUTOMATED
+docker.io     nginx                             Official build of Nginx.                        14466   [OK]      
+docker.io     jwilder/nginx-proxy               Automated Nginx reverse proxy for docker con…   1968               [OK]
+docker.io     richarvey/nginx-php-fpm           Container running Nginx + PHP-FPM capable of…   807                [OK]
+docker.io     jc21/nginx-proxy-manager          Docker container for managing Nginx proxy ho…   150               
+docker.io     linuxserver/nginx                 An Nginx container, brought to you by LinuxS…   141               
+docker.io     tiangolo/nginx-rtmp               Docker image with Nginx using the nginx-rtmp…   115                [OK]
+docker.io     jlesage/nginx-proxy-manager       Docker container for Nginx Proxy Manager        95                 [OK]
+docker.io     bitnami/nginx                     Bitnami nginx Docker Image                      94                 [OK]
+docker.io     alfg/nginx-rtmp                   NGINX, nginx-rtmp-module and FFmpeg from sou…   89                 [OK]
+docker.io     nginxdemos/hello                  NGINX webserver that serves a simple page co…   66                 [OK]
+docker.io     nginx/nginx-ingress               NGINX Ingress Controller for Kubernetes         48                
+docker.io     privatebin/nginx-fpm-alpine       PrivateBin running on an Nginx, php-fpm & Al…   46                 [OK]
+docker.io     nginxinc/nginx-unprivileged       Unprivileged NGINX Dockerfiles                  31                
+docker.io     schmunk42/nginx-redirect          A very simple container to redirect HTTP tra…   19                 [OK]
+docker.io     staticfloat/nginx-certbot         Opinionated setup for automatic TLS certs lo…   19                 [OK]
+docker.io     centos/nginx-112-centos7          Platform for running nginx 1.12 or building …   15                
+docker.io     nginx/nginx-prometheus-exporter   NGINX Prometheus Exporter                       15                
+docker.io     centos/nginx-18-centos7           Platform for running nginx 1.8 or building n…   13                
+docker.io     raulr/nginx-wordpress             Nginx front-end for the official wordpress:f…   13                 [OK]
+docker.io     bitwarden/nginx                   The Bitwarden nginx web server acting as a r…   9                 
+docker.io     flashspys/nginx-static            Super Lightweight Nginx Image                   9                  [OK]
+docker.io     bitnami/nginx-ingress-controller  Bitnami Docker Image for NGINX Ingress Contr…   8                  [OK]
+docker.io     mailu/nginx                       Mailu nginx frontend                            8                  [OK]
+docker.io     ansibleplaybookbundle/nginx-apb   An APB to deploy NGINX                          2                  [OK]
+docker.io     wodby/nginx                       Generic nginx                                   1                  [OK]
 </code>
 </pre>
 </div>
