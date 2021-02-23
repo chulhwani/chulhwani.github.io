@@ -67,7 +67,10 @@ $ code .
 <strong>3. GIT 사용하기</strong>
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
-<pre class="highlight"><code>touch README.md
+<pre class="highlight"><code><b># GIT 매뉴얼 사용하기</b>
+git commit --help
+
+touch README.md
 git init
 git add README.md
 git commit -m "first commit"
