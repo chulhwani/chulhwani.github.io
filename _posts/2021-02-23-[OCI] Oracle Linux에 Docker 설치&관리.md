@@ -224,7 +224,7 @@ nginx               latest              35c43ace9216        5 days ago          
 </div>
 </div>
 <p>&nbsp;</p>
-<p><strong><font size="4">6. Docker Image 생성</font></strong></p>
+<strong><font size="4">6. Docker Image 생성</font></strong>
 <pre class="highlight"><code>
 [root@docker-server ~]# mkdir hostname_finder
 [root@docker-server ~]# cd hostname_finder
@@ -308,4 +308,369 @@ goapp               latest              4934dcbeee46        18 seconds ago      
 nginx               latest              35c43ace9216        5 days ago          133MB
 golang              1.11-alpine         e116d2efa2ab        18 months ago       312MB
 </code></pre>
-<p>&nbsp;</p>
+<strong><font size="4">6. Docker Image 생성</font></strong>
+<pre class="highlight"><code>
+[root@docker-server ~]# mkdir hostname_finder
+[root@docker-server ~]# cd hostname_finder
+
+<b># "main.go" Application Code 생성</b>
+[root@docker-server hostname_finder]# cat main.go
+package main
+
+import (
+        "fmt"
+        "os"
+        "log"
+        "net/http"
+)
+func handler(w http.ResponseWriter, r *http.Request){
+        name, err := os.Hostname()
+        if err != nil {
+                panic(err)
+        }
+
+        fmt.Fprintln(w,"hostname:", name)
+}
+func main() {
+  fmt.Fprintln(os.Stdout,"Starting GoApp Server......")
+        http.HandleFunc("/",handler)
+        log.Fatal(http.ListenAndServe(":8080",nil))
+}
+
+<b># Dockerfile 파일 생성</b>
+[root@docker-server hostname_finder]# cat Dockerfile
+FROM golang:1.11-alpine AS build
+
+WORKDIR /src/
+COPY main.go go.* /src/
+RUN CGO_ENABLED=0 go build -o /bin/demo
+
+FROM scratch
+COPY --from=build /bin/demo /bin/demo
+ENTRYPOINT ["/bin/demo"]
+
+<b># Dockerfile 참조해서 "goapp" 이미지 생성</b>
+[root@docker-server hostname_finder]# docker build -t goapp .
+Sending build context to Docker daemon  3.072kB
+Step 1/7 : FROM golang:1.11-alpine AS build
+Trying to pull repository docker.io/library/golang ...
+1.11-alpine: Pulling from docker.io/library/golang
+9d48c3bd43c5: Pull complete
+7f94eaf8af20: Pull complete
+9fe9984849c1: Pull complete
+ec448270508e: Pull complete
+65ba82af53f7: Pull complete
+Digest: sha256:09e47edb668c2cac8c0bbce113f2f72c97b1555d70546dff569c8b9b27fcebd3
+Status: Downloaded newer image for golang:1.11-alpine
+ ---> e116d2efa2ab
+Step 2/7 : WORKDIR /src/
+ ---> Running in e0c50665d6ed
+Removing intermediate container e0c50665d6ed
+ ---> fe92438beb97
+Step 3/7 : COPY main.go go.* /src/
+ ---> 29dd9892d3a8
+Step 4/7 : RUN CGO_ENABLED=0 go build -o /bin/demo
+ ---> Running in d96fc6e909aa
+Removing intermediate container d96fc6e909aa
+ ---> 382c2e92fdc8
+Step 5/7 : FROM scratch
+ --->
+Step 6/7 : COPY --from=build /bin/demo /bin/demo
+ ---> f54098d2d7bd
+Step 7/7 : ENTRYPOINT ["/bin/demo"]
+ ---> Running in ea48d14822ea
+Removing intermediate container ea48d14822ea
+ ---> 4934dcbeee46
+Successfully built 4934dcbeee46
+Successfully tagged goapp:latest
+
+<b># Docker Image 확인</b>
+[root@docker-server hostname_finder]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+goapp               latest              4934dcbeee46        18 seconds ago      6.51MB
+<none>              <none>              382c2e92fdc8        19 seconds ago      325MB
+nginx               latest              35c43ace9216        5 days ago          133MB
+golang              1.11-alpine         e116d2efa2ab        18 months ago       312MB
+</code></pre>
+<strong><font size="4">7. Docker Container 시작/확인</font></strong>
+<pre class="highlight"><code>
+<b># Docker Container 시작</b>
+[root@docker-server hostname_finder]# docker run --name goapp-project -p 8080:8080 -d goapp
+729f55251fd6a7b88bdf680fac8486be8206780fab58afd3b8545c6823e2c059
+
+<b># Docker Container Service 확인</b>
+[root@docker-server hostname_finder]# curl localhost:8080
+hostname: 729f55251fd6
+
+<b># Docker Process 확인</b>
+[root@docker-server hostname_finder]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                    NAMES
+729f55251fd6        goapp               "/bin/demo"         21 seconds ago      Up 18 seconds       0.0.0.0:8080->8080/tcp   goapp-project
+
+<b># Docker Process 상세정보 확인</b>
+[root@docker-server hostname_finder]# docker inspect goapp-project
+[
+    {
+        "Id": "729f55251fd6a7b88bdf680fac8486be8206780fab58afd3b8545c6823e2c059",
+        "Created": "2021-02-23T05:15:47.993914692Z",
+        "Path": "/bin/demo",
+        "Args": [],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 12361,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2021-02-23T05:15:49.898204306Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:4934dcbeee465b7b37bfcf7e867d603208ef7b31398472350bc6c3d32aefc17c",
+        "ResolvConfPath": "/var/lib/docker/containers/729f55251fd6a7b88bdf680fac8486be8206780fab58afd3b8545c6823e2c059/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/729f55251fd6a7b88bdf680fac8486be8206780fab58afd3b8545c6823e2c059/hostname",
+        "HostsPath": "/var/lib/docker/containers/729f55251fd6a7b88bdf680fac8486be8206780fab58afd3b8545c6823e2c059/hosts",
+        "LogPath": "/var/lib/docker/containers/729f55251fd6a7b88bdf680fac8486be8206780fab58afd3b8545c6823e2c059/729f55251fd6a7b88bdf680fac8486be8206780fab58afd3b8545c6823e2c059-json.log",
+        "Name": "/goapp-project",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {
+                "8080/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8080"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Capabilities": null,
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "KernelMemory": 0,
+            "KernelMemoryTCP": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/17cf8aca3036256838e0838580c3d15111bcef2a2db896c5224e9e726c9f0800-init/diff:/var/lib/docker/overlay2/84516e3c3040b0336b800e673c0314d9753ce2816d40f314971c24c509ef32d1/diff",
+                "MergedDir": "/var/lib/docker/overlay2/17cf8aca3036256838e0838580c3d15111bcef2a2db896c5224e9e726c9f0800/merged",
+                "UpperDir": "/var/lib/docker/overlay2/17cf8aca3036256838e0838580c3d15111bcef2a2db896c5224e9e726c9f0800/diff",
+                "WorkDir": "/var/lib/docker/overlay2/17cf8aca3036256838e0838580c3d15111bcef2a2db896c5224e9e726c9f0800/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "729f55251fd6",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": null,
+            "Image": "goapp",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": [
+                "/bin/demo"
+            ],
+            "OnBuild": null,
+            "Labels": {}
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "8d124e6092c2a915586de4af814b868db8040dbefc61c258c9434aad47ae00e6",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "8080/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "8080"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/8d124e6092c2",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "c6813f088b645bb2b01abf6aa9f32b13e3cb1c01b449ecc990ec1627549a58c0",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:02",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "633aa1977d348150859486313eac2f2d0da48b57afc66a3866ab6b0de390b2c1",
+                    "EndpointID": "c6813f088b645bb2b01abf6aa9f32b13e3cb1c01b449ecc990ec1627549a58c0",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:02",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
+</code></pre>
+<strong><font size="4">8. Docker Instance 중지 및 삭제</font></strong>
+<pre class="highlight"><code>
+<b># Docker Instance 중지</b>
+[root@docker-server hostname_finder]# docker stop goapp-project
+goapp-project
+
+<b># Docker Image 확인</b>
+[root@docker-server hostname_finder]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+goapp               latest              4934dcbeee46        21 minutes ago      6.51MB
+<none>              <none>              382c2e92fdc8        21 minutes ago      325MB
+nginx               latest              35c43ace9216        5 days ago          133MB
+golang              1.11-alpine         e116d2efa2ab        18 months ago       312MB
+
+<b># Docker goapp Image 삭제(에러발생)</b>
+[root@docker-server hostname_finder]# docker rmi 4934dcbeee46
+Error response from daemon: conflict: unable to delete 4934dcbeee46 (must be forced) - image is being used by stopped container 729f55251fd6
+
+<b># Docker 모든 Image 강제 삭제</b>
+[root@docker-server hostname_finder]# docker rmi $(docker images -q) -f
+Untagged: goapp:latest
+Deleted: sha256:4934dcbeee465b7b37bfcf7e867d603208ef7b31398472350bc6c3d32aefc17c
+Deleted: sha256:f54098d2d7bd4e1ad9f3aa0728c27553c031b25c4652ba6e94d08641943979b7
+Deleted: sha256:382c2e92fdc880d724c2c8a4125b5dc5737803ebd02571e4912aa6882ec8bf93
+Deleted: sha256:4f3baa7ed94a529a7224a24a27c27e4bc60409ca47b8a3108e9794d1f7acf126
+Deleted: sha256:29dd9892d3a89651c848fcab420331df520b90743beb4dd2fc5334cbfe811fc4
+Deleted: sha256:92927ded1036d1a5b30725a9cc0a5a92c8423da32c2d613e45008e10d61f5139
+Deleted: sha256:fe92438beb9760f9473cfdf1a4367486dcb8771b66a213b91392bf5baacce8b3
+Deleted: sha256:73d4225c31f262978c0f7607bd29c58faef4777d7ae43d4de3080855b3db3e4d
+Untagged: nginx:latest
+Untagged: nginx@sha256:f3693fe50d5b1df1ecd315d54813a77afd56b0245a404055a946574deb6b34fc
+Deleted: sha256:35c43ace9216212c0f0e546a65eec93fa9fc8e96b25880ee222b7ed2ca1d2151
+Deleted: sha256:61f2666cb67e4572a31412367fa44567e6ac238226385762ea65670ed39034a8
+Deleted: sha256:622fb7fb6a35078e3a2d446bb0e74c6a0cd500e3a211fd17ecbbcea5377ded38
+Deleted: sha256:69a8591f1aaa7d694fa79a187886f6690e6e51e8c2bc91727be01a9e87daacd2
+Deleted: sha256:8a451c701633832102e10093db7545eada8e5639a1b35bb14afaf48601948802
+Deleted: sha256:2edbde38832e9e0e07d113df74817dc736fd49ea2f9c0d7ce8e40e3446b49b82
+Deleted: sha256:9eb82f04c782ef3f5ca25911e60d75e441ce0fe82e49f0dbf02c81a3161d1300
+Untagged: golang:1.11-alpine
+Untagged: golang@sha256:09e47edb668c2cac8c0bbce113f2f72c97b1555d70546dff569c8b9b27fcebd3
+Deleted: sha256:e116d2efa2ab6f7af3e077771fda81477a2bc8d5c5e98d60ad00bccec714f6b9
+Deleted: sha256:5fec25f9ac3477c413742ca10f2d6c16399fd78a41e5c8aea0418afd8a17a513
+Deleted: sha256:2b0889b33a0db51cf154ab6a296f6dd035c8d3004ad0aed97924ec33885c0a4e
+Deleted: sha256:901d0a7238b8bb071fa1529039a816df841a517eea1cb7e14f593a033295f305
+Deleted: sha256:ac07a2767514fcd0741ef837900172f6c3a6df7900d1f52f11644389bd98001a
+Deleted: sha256:03901b4a2ea88eeaad62dbe59b072b28b6efa00491962b8741081c5df50c65e0
+
+<b># Docker Image 확인</b>
+[root@docker-server hostname_finder]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+</code></pre>
