@@ -5,21 +5,18 @@
 <strong>2. GIT Config</strong>
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
-<pre class="highlight"><code><b><p># GIT 초기화(프로젝트 버전 관리 시작)</b>
+<pre class="highlight"><code><b># GIT 초기화(프로젝트 버전 관리 시작)</b>
 cshim@CSHIM-KR MINGW64 /d/DOWNLOADs/GIT
 $ git init
 Initialized empty Git repository in D:/DOWNLOADs/GIT/.git/<br>
-</p>
 
-<p>cshim@CSHIM-KR MINGW64 /d/DOWNLOADs/GIT (master)
+cshim@CSHIM-KR MINGW64 /d/DOWNLOADs/GIT (master)
 $ git config --global user.name "chulhwani"
-</p>
 
-<p>cshim@CSHIM-KR MINGW64 /d/DOWNLOADs/GIT (master)
+cshim@CSHIM-KR MINGW64 /d/DOWNLOADs/GIT (master)
 $ git config --global user.email "chulhwani@gmail.com"
-</p>
 
-<p>cshim@CSHIM-KR MINGW64 /d/DOWNLOADs/GIT (master)
+cshim@CSHIM-KR MINGW64 /d/DOWNLOADs/GIT (master)
 $ git config --list
 diff.astextplain.textconv=astextplain
 filter.lfs.clean=git-lfs clean -- %f
@@ -51,21 +48,18 @@ core.bare=false
 core.logallrefupdates=true
 core.symlinks=false
 core.ignorecase=true
-</p>
 
-<p>cshim@CSHIM-KR MINGW64 /d/DOWNLOADs/GIT (master)
+cshim@CSHIM-KR MINGW64 /d/DOWNLOADs/GIT (master)
 $ git status
 On branch master
 
 No commits yet
 
 nothing to commit (create/copy files and use "git add" to track)
-</p>
 
-<p><b># Visual Studio Code 호출</b>
+<b># Visual Studio Code 호출</b>
 cshim@CSHIM-KR MINGW64 /d/DOWNLOADs/GIT (master)
 $ code .
-</p>
 </code></pre>
 </div>
 </div>
@@ -76,7 +70,7 @@ $ code .
 <pre class="highlight"><code><b><p># GIT 매뉴얼 사용하기</b>
 git commit --help</p>
 
-<p><b># GIT 사용</b>
+<b># GIT 사용</b>
 touch README.md
 git init
 git add README.md
@@ -92,7 +86,7 @@ git init
 git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/chulhwani/HTML-Basics.git
-git push -u origin mastertouch README.md</p>
+git push -u origin mastertouch README.md
 </code></pre>
 </div>
 </div>
