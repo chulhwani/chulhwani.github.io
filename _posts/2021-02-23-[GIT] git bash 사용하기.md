@@ -1,13 +1,11 @@
 <strong>1. GIT 다운로드(윈도우) 및 설치</strong>
-<pre class="highlight"><code>
-https://git-scm.com/
+<pre class="highlight"><code>https://git-scm.com/
 </code></pre>
 <p>&nbsp;</p>
 <strong>2. GIT Config</strong>
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
-<pre class="highlight"><code>
-<b># GIT 초기화(프로젝트 버전 관리 시작)</b>
+<pre class="highlight"><code><b># GIT 초기화(프로젝트 버전 관리 시작)</b>
 cshim@CSHIM-KR MINGW64 /d/DOWNLOADs/GIT
 $ git init
 Initialized empty Git repository in D:/DOWNLOADs/GIT/.git/
@@ -69,8 +67,7 @@ $ code .
 <strong>3. GIT 사용하기</strong>
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
-<pre class="highlight"><code>
-touch README.md
+<pre class="highlight"><code>touch README.md
 git init
 git add README.md
 git commit -m "first commit"
