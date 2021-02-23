@@ -67,26 +67,18 @@ $ code .
 <strong>3. GIT 사용하기</strong>
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
-<pre class="highlight"><code><b><p># GIT 매뉴얼 사용하기</b>
-git commit --help</p>
+<pre class="highlight"><code><b># GIT 매뉴얼 사용하기</b>
+git commit --help
 
 <b># GIT 사용</b>
-touch README.md
 git init
 git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/chulhwani/HTML-Basics.git
 git push -u origin mastertouch README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/chulhwani/HTML-Basics.git
-git push -u origin mastertouch README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/chulhwani/HTML-Basics.git
-git push -u origin mastertouch README.md
+
+git log
+git diff
 </code></pre>
 </div>
 </div>
