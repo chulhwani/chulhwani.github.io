@@ -76,7 +76,9 @@ git init
 git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/chulhwani/HTML-Basics.git
-git push -u origin mastertouch README.md
+git push -u origin master
+
+git remote -v
 
 git log
 git log --all
