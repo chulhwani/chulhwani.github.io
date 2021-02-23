@@ -306,7 +306,7 @@ Successfully tagged goapp:latest
 [root@docker-server hostname_finder]# docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 goapp               latest              4934dcbeee46        18 seconds ago      6.51MB
-<none>              <none>              382c2e92fdc8        19 seconds ago      325MB
+none                none                382c2e92fdc8        19 seconds ago      325MB
 nginx               latest              35c43ace9216        5 days ago          133MB
 golang              1.11-alpine         e116d2efa2ab        18 months ago       312MB
 </code></pre>
