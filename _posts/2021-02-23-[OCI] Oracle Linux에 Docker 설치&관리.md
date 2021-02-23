@@ -153,7 +153,7 @@ Hint: Some lines were ellipsized, use -l to show in full.
 </code></pre>
 <p>&nbsp;</p>
 <strong><font size="4">5. Docker 관리</font></strong>
-<div style="overflow:auto; width:400px; height:150px;" class="language-plaintext highlighter-rouge">
+<div style="white-space:nowrap; overflow:auto;" class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight"><code>
 <b># 부팅시 자동 Docker Daemon 시작</b>
