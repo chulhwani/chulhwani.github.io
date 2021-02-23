@@ -71,6 +71,7 @@ $ code .
 git commit --help
 
 <b># GIT 사용</b>
+touch README.md
 git init
 git add README.md
 git commit -m "first commit"
