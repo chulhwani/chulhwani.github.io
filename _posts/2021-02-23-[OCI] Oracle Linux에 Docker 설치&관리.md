@@ -122,8 +122,7 @@ Complete!
 <p>&nbsp;</p>
 <p><strong><font size="4">4. Docker Service 확인</font></strong></p>
 <pre class="highlight"><code>[root@docker-server ~]# docker -v
-Docker version 19.03.11-ol, build f0aae77
-
+<p>Docker version 19.03.11-ol, build f0aae77<p>
 [root@docker-server opc]# systemctl status docker
  docker.service - Docker Application Container Engine
    Loaded: loaded (/usr/lib/systemd/system/docker.service; enabled; vendor preset: disabled)
