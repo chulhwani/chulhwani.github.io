@@ -312,6 +312,7 @@ golang              1.11-alpine         e116d2efa2ab        18 months ago       
 </code></pre>
 </div>
 </div>
+<p>&nbsp;</p>
 <strong><font size="4">7. Docker Container 시작/확인</font></strong>
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
