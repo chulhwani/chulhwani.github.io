@@ -120,13 +120,13 @@ Complete!
 <p>&nbsp;</p>
 <p><strong><font size="4">3. Docker Service 실행</font></strong></p>
 <pre class="highlight"><code>[root@docker-server ~]# systemctl enable docker
-<p>Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service to /usr/lib/systemd/system/docker.service.</p>
+Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service to /usr/lib/systemd/system/docker.service.</p>
 [root@docker-server ~]# systemctl start docker
 </code></pre>
 <p>&nbsp;</p>
 <p><strong><font size="4">4. Docker Service 확인</font></strong></p>
 <pre class="highlight"><code>[root@docker-server ~]# docker -v
-<p>Docker version 19.03.11-ol, build f0aae77<p>
+Docker version 19.03.11-ol, build f0aae77<p>
 [root@docker-server ~]# systemctl status docker
  docker.service - Docker Application Container Engine
    Loaded: loaded (/usr/lib/systemd/system/docker.service; enabled; vendor preset: disabled)
@@ -149,10 +149,11 @@ Feb 23 00:32:33 docker-server dockerd[32222]: time="2021-02-23T00:32:33.72201156
 Feb 23 00:32:33 docker-server systemd[1]: Started Docker Application Container Engine.
 Feb 23 00:32:33 docker-server dockerd[32222]: time="2021-02-23T00:32:33.807070467Z" level=info msg="API listen on /var/run/docker.sock"
 Hint: Some lines were ellipsized, use -l to show in full.
-<code>
-</pre>
+<code></pre>
 <p>&nbsp;</p>
 <p><strong><font size="4">5. Docker 관리</font></strong></p>
+<div class="language-plaintext highlighter-rouge">
+<div class="highlight">
 <pre class="highlight"><code>[root@docker-server ~]# systemctl enable docker.service  # 부팅시에 자동 Docker Daemon 시작
 <p>&nbsp;</p>
 [root@docker-server ~]# sudo docker login   #도커 hub 사용을 위한 계정생성
@@ -166,3 +167,5 @@ https://docs.docker.com/engine/reference/commandline/login/#credentials-store
 Login Succeeded
 </code>
 </pre>
+</div>
+</div>
