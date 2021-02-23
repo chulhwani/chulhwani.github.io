@@ -71,12 +71,14 @@ $ code .
 git commit --help
 
 <b># GIT 사용</b>
-touch README.md
+echo "# git-test" >> README.md   (or touch README.md)
 git init
 git add README.md
 git commit -m "first commit"
-git remote add origin https://github.com/chulhwani/HTML-Basics.git
+git remote add origin https://github.com/chulhwani/git-test.git
 git push -u origin master
+
+git remote set-url origin https://chulhwani@github.com/chulhwani/git-test.git
 
 git remote -v
 
