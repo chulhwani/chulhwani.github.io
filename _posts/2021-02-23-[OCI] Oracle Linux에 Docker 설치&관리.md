@@ -628,7 +628,7 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 </div>
 </div>
 <p>&nbsp;</p>
-<strong><font size="4">참고 URL</strong>
+<strong><font size="4">참고 URL</font></strong>
 <div style="white-space:nowrap; overflow:auto;" class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight"><code>
