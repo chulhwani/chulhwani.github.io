@@ -70,7 +70,27 @@ $ code .
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight"><code>
-
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/akkias/HTML-Basics.git
+git push -u origin mastertouch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/akkias/HTML-Basics.git
+git push -u origin mastertouch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/akkias/HTML-Basics.git
+git push -u origin mastertouch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/akkias/HTML-Basics.git
+git push -u origin master
 </code></pre>
 </div>
 </div>
