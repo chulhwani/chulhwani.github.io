@@ -225,6 +225,8 @@ nginx               latest              35c43ace9216        5 days ago          
 </div>
 <p>&nbsp;</p>
 <strong><font size="4">6. Docker Image 생성</font></strong>
+<div style="white-space:nowrap; overflow:auto;" class="language-plaintext highlighter-rouge">
+<div class="highlight">
 <pre class="highlight"><code>
 [root@docker-server ~]# mkdir hostname_finder
 [root@docker-server ~]# cd hostname_finder
@@ -308,6 +310,8 @@ goapp               latest              4934dcbeee46        18 seconds ago      
 nginx               latest              35c43ace9216        5 days ago          133MB
 golang              1.11-alpine         e116d2efa2ab        18 months ago       312MB
 </code></pre>
+</div>
+</div>
 <strong><font size="4">7. Docker Container 시작/확인</font></strong>
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
@@ -541,7 +545,11 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
     }
 ]
 </code></pre>
+</div>
+</div>
 <strong><font size="4">8. Docker Instance 중지 및 삭제</font></strong>
+<div style="white-space:nowrap; overflow:auto;" class="language-plaintext highlighter-rouge">
+<div class="highlight">
 <pre class="highlight"><code>
 <b># Docker Instance 중지</b>
 [root@docker-server hostname_finder]# docker stop goapp-project
