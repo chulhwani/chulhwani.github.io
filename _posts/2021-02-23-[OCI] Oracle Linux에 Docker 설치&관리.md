@@ -152,8 +152,8 @@ Feb 23 00:32:33 docker-server dockerd[32222]: time="2021-02-23T00:32:33.80707046
 Hint: Some lines were ellipsized, use -l to show in full.
 </code></pre>
 <p>&nbsp;</p>
-<p><strong><font size="4">5. Docker 관리</font></strong></p>
-<div style="overflow:auto; width:400px; height:150px; class="language-plaintext highlighter-rouge">
+<strong><font size="4">5. Docker 관리</font></strong>
+<div style="overflow:auto; width:400px; height:150px;" class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight"><code>
 <b># 부팅시 자동 Docker Daemon 시작</b>
@@ -198,6 +198,27 @@ docker.io     bitnami/nginx-ingress-controller  Bitnami Docker Image for NGINX I
 docker.io     mailu/nginx                       Mailu nginx frontend                            8                  [OK]
 docker.io     ansibleplaybookbundle/nginx-apb   An APB to deploy NGINX                          2                  [OK]
 docker.io     wodby/nginx                       Generic nginx                                   1                  [OK]
+
+<b># Docker Image download</b>
+[root@docker-server ~]# docker pull nginx:latest
+Trying to pull repository docker.io/library/nginx ...
+latest: Pulling from docker.io/library/nginx
+45b42c59be33: Pull complete
+8acc495f1d91: Pull complete
+ec3bd7de90d7: Pull complete
+19e2441aeeab: Pull complete
+f5a38c5f8d4e: Pull complete
+83500d851118: Pull complete
+Digest: sha256:f3693fe50d5b1df1ecd315d54813a77afd56b0245a404055a946574deb6b34fc
+Status: Downloaded newer image for nginx:latest
+nginx:latest
+
+<b># Docker Image 목록 보기</b>
+[root@docker-server ~]# docker image list
+[root@docker-server ~]# docker image ls
+[root@docker-server ~]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+nginx               latest              35c43ace9216        5 days ago          133MB
 </code>
 </pre>
 </div>
