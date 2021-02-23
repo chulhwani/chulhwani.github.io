@@ -1,9 +1,9 @@
-<p><strong>1. GIT 다운로드(윈도우) 및 설치</strong></p>
+<strong>1. GIT 다운로드(윈도우) 및 설치</strong>
 <pre class="highlight"><code>
 https://git-scm.com/
 </code></pre>
 <p>&nbsp;</p>
-<p><strong>2. GIT Config</strong></p>
+<strong>2. GIT Config</strong>
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight"><code>
@@ -66,7 +66,7 @@ $ code .
 </div>
 </div>
 <p>&nbsp;</p>
-<p><strong>3. GIT 사용하기</strong></p>
+<strong>3. GIT 사용하기</strong>
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight"><code>
