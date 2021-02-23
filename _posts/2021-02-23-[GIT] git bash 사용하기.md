@@ -79,6 +79,7 @@ git push -u origin mastertouch README.md
 
 git log
 git diff
+git checkout (master)/(head)
 </code></pre>
 </div>
 </div>
