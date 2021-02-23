@@ -630,6 +630,6 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 <p>&nbsp;</p>
 <strong><font size="4">참고 URL</font></strong>
 <pre class="highlight">
-<a href="https://blogs.oracle.com/virtualization/install-docker-on-oracle-linux-7-v2" target="_blank">Install Docker on Oracle Linux 7<br>
+<a href="https://blogs.oracle.com/virtualization/install-docker-on-oracle-linux-7-v2" target="_blank">Install Docker on Oracle Linux 7</a><br>
 <a href="https://blogs.oracle.com/blogbypuneeth/a-simple-guide-to-docker-installation-on-oracle-linux-75" target="_blank">A Simple Guide to docker installation on Oracle Linux 7.5</a>
 </pre>
