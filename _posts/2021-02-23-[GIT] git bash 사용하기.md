@@ -70,6 +70,7 @@ $ code .
 <pre class="highlight"><code><b># GIT 매뉴얼 사용하기</b>
 git commit --help
 
+<b># GIT 사용</b>
 touch README.md
 git init
 git add README.md
