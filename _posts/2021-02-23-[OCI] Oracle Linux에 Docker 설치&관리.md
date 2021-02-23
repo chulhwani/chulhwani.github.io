@@ -149,8 +149,10 @@ Feb 23 00:32:33 docker-server dockerd[32222]: time="2021-02-23T00:32:33.72201156
 Feb 23 00:32:33 docker-server systemd[1]: Started Docker Application Container Engine.
 Feb 23 00:32:33 docker-server dockerd[32222]: time="2021-02-23T00:32:33.807070467Z" level=info msg="API listen on /var/run/docker.sock"
 Hint: Some lines were ellipsized, use -l to show in full.
-<code></pre>
+<code>
+</pre>
 <p>&nbsp;</p>
 <p><strong><font size="4">5. Docker 관리</font></strong></p>
 <pre class="highlight"><code>[root@docker-server ~]# systemctl enable docker.service  # 부팅시에 자동 Docker Daemon 시작
-</code></pre>
+</code>
+</pre>
