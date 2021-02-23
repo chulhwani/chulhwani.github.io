@@ -8,7 +8,7 @@
 <pre class="highlight"><code><b># GIT 초기화(프로젝트 버전 관리 시작)</b>
 cshim@CSHIM-KR MINGW64 /d/DOWNLOADs/GIT
 $ git init
-Initialized empty Git repository in D:/DOWNLOADs/GIT/.git/
+Initialized empty Git repository in D:/DOWNLOADs/GIT/.git/<br>
 
 cshim@CSHIM-KR MINGW64 /d/DOWNLOADs/GIT (master)
 $ git config --global user.name "chulhwani"
@@ -68,7 +68,7 @@ $ code .
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight"><code><b># GIT 매뉴얼 사용하기</b>
-git commit --help
+git commit --help<br>
 
 <b># GIT 사용</b>
 touch README.md
