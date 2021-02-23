@@ -562,7 +562,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 The push refers to repository [docker.io/chulhwani/goapp]
 cc282a374c26: Pushed
 latest: digest: sha256:b18b5ff03599893a7361feda054ebe26de61a71f019dc8725bb33d87f2115968 size: 528
-<p>&nbsp;</p>
+
 <b># Docker Hub의 image로 Container 실행</b>
 [root@docker-server ~]# docker run --name goapp-project -p 8080:8080 -d chulhwani/goapp
 CONTAINER ID   IMAGE            COMMAND      CREATED        STATUS         PORTS                   NAMES
@@ -578,7 +578,7 @@ CONTAINER ID   IMAGE            COMMAND      CREATED        STATUS         PORTS
 <b># Docker Instance 중지</b>
 [root@docker-server hostname_finder]# docker stop goapp-project
 goapp-project
-<p>&nbsp;</p>
+
 <b># Docker Image 확인</b>
 [root@docker-server hostname_finder]# docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
@@ -586,7 +586,7 @@ goapp               latest              4934dcbeee46        21 minutes ago      
 none                none                382c2e92fdc8        21 minutes ago      325MB
 nginx               latest              35c43ace9216        5 days ago          133MB
 golang              1.11-alpine         e116d2efa2ab        18 months ago       312MB
-<p>&nbsp;</p>
+
 <b># Docker goapp Image 삭제(에러발생)</b>
 [root@docker-server hostname_finder]# docker rmi 4934dcbeee46
 Error response from daemon: conflict: unable to delete 4934dcbeee46 (must be forced) - image is being used by stopped container 729f55251fd6
