@@ -16,14 +16,14 @@
 <div class="highlight">
 <pre class="highlight"><code>[root@docker-server ~]# yum install -y docker-engine
 Loaded plugins: langpacks, ulninfo
-ol7_MySQL80                                                                           | 2.8 kB  00:00:00
-ol7_UEKR6                                                                             | 2.8 kB  00:00:00
-ol7_addons                                                                            | 2.8 kB  00:00:00
-ol7_ksplice                                                                           | 2.8 kB  00:00:00
-ol7_latest                                                                            | 3.4 kB  00:00:00
-ol7_oci_included                                                                      | 2.9 kB  00:00:00
-ol7_optional_latest                                                                   | 2.8 kB  00:00:00
-ol7_software_collections                                                              | 2.8 kB  00:00:00
+ol7_MySQL80                                                       | 2.8 kB  00:00:00
+ol7_UEKR6                                                         | 2.8 kB  00:00:00
+ol7_addons                                                        | 2.8 kB  00:00:00
+ol7_ksplice                                                       | 2.8 kB  00:00:00
+ol7_latest                                                        | 3.4 kB  00:00:00
+ol7_oci_included                                                  | 2.9 kB  00:00:00
+ol7_optional_latest                                               | 2.8 kB  00:00:00
+ol7_software_collections                                          | 2.8 kB  00:00:00
 Resolving Dependencies
 --> Running transaction check
 ---> Package docker-engine.x86_64 0:19.03.11.ol-8.el7 will be installed
@@ -49,64 +49,69 @@ Resolving Dependencies
 
 Dependencies Resolved
 
-======================================================================================================================
- Package                       Arch          Version                                 Repository        Size
-======================================================================================================================
+======================================================================================================
+ Package                       Arch      Version                           Repository        Size
+======================================================================================================
 Installing:
- docker-engine                 x86_64        19.03.11.ol-8.el7                       ol7_addons        21 M
+ docker-engine                 x86_64    19.03.11.ol-8.el7                 ol7_addons        21 M
 Installing for dependencies:
- container-selinux             noarch        2:2.107-3.el7                           ol7_addons        39 k
- containerd                    x86_64        1.3.9-2.el7                             ol7_addons        27 M
- criu                          x86_64        3.12-2.el7                              ol7_latest       452 k
- docker-cli                    x86_64        19.03.11.ol-8.el7                       ol7_addons        34 M
- libnet                        x86_64        1.1.6-7.el7                             ol7_latest        57 k
- protobuf-c                    x86_64        1.0.2-3.el7                             ol7_latest        27 k
- runc                          x86_64        1.0.0-19.rc5.git4bb1fe4.0.4.el7         ol7_addons       1.9 M
+ container-selinux             noarch    2:2.107-3.el7                     ol7_addons        39 k
+ containerd                    x86_64    1.3.9-2.el7                       ol7_addons        27 M
+ criu                          x86_64    3.12-2.el7                        ol7_latest       452 k
+ docker-cli                    x86_64    19.03.11.ol-8.el7                 ol7_addons        34 M
+ libnet                        x86_64    1.1.6-7.el7                       ol7_latest        57 k
+ protobuf-c                    x86_64    1.0.2-3.el7                       ol7_latest        27 k
+ runc                          x86_64    1.0.0-19.rc5.git4bb1fe4.0.4.el7   ol7_addons       1.9 M
 
 Transaction Summary
-=====================================================================================================================
+=======================================================================================================
 Install  1 Package (+7 Dependent packages)
 
 Total download size: 85 M
 Installed size: 347 M
 Downloading packages:
-(1/8): container-selinux-2.107-3.el7.noarch.rpm                                               |  39 kB  00:00:00
-(2/8): criu-3.12-2.el7.x86_64.rpm                                                             | 452 kB  00:00:01
-(3/8): containerd-1.3.9-2.el7.x86_64.rpm                                                      |  27 MB  00:00:01
-(4/8): docker-cli-19.03.11.ol-8.el7.x86_64.rpm                                                |  34 MB  00:00:01
-(5/8): runc-1.0.0-19.rc5.git4bb1fe4.0.4.el7.x86_64.rpm                                        | 1.9 MB  00:00:00
-(6/8): docker-engine-19.03.11.ol-8.el7.x86_64.rpm                                             |  21 MB  00:00:01
-(7/8): protobuf-c-1.0.2-3.el7.x86_64.rpm                                                      |  27 kB  00:00:01
-(8/8): libnet-1.1.6-7.el7.x86_64.rpm                                                          |  57 kB  00:00:02
------------------------------------------------------------------------------------------------------------------------
-Total                                                                                 21 MB/s |  85 MB  00:00:03
+(1/8): container-selinux-2.107-3.el7.noarch.rpm                                     |  39 kB  00:00:00
+(2/8): criu-3.12-2.el7.x86_64.rpm                                                   | 452 kB  00:00:01
+(3/8): containerd-1.3.9-2.el7.x86_64.rpm                                            |  27 MB  00:00:01
+(4/8): docker-cli-19.03.11.ol-8.el7.x86_64.rpm                                      |  34 MB  00:00:01
+(5/8): runc-1.0.0-19.rc5.git4bb1fe4.0.4.el7.x86_64.rpm                              | 1.9 MB  00:00:00
+(6/8): docker-engine-19.03.11.ol-8.el7.x86_64.rpm                                   |  21 MB  00:00:01
+(7/8): protobuf-c-1.0.2-3.el7.x86_64.rpm                                            |  27 kB  00:00:01
+(8/8): libnet-1.1.6-7.el7.x86_64.rpm                                                |  57 kB  00:00:02
+--------------------------------------------------------------------------------------------------------
+Total                                                                       21 MB/s |  85 MB  00:00:03
 Running transaction check
 Running transaction test
 Transaction test succeeded
 Running transaction
-  Installing : 2:container-selinux-2.107-3.el7.noarch                                                  1/8
-  Installing : containerd-1.3.9-2.el7.x86_64                                                           2/8
-  Installing : libnet-1.1.6-7.el7.x86_64                                                               3/8
-  Installing : docker-cli-19.03.11.ol-8.el7.x86_64                                                     4/8
-  Installing : protobuf-c-1.0.2-3.el7.x86_64                                                           5/8
-  Installing : criu-3.12-2.el7.x86_64                                                                  6/8
-  Installing : runc-1.0.0-19.rc5.git4bb1fe4.0.4.el7.x86_64                                             7/8
-  Installing : docker-engine-19.03.11.ol-8.el7.x86_64                                                  8/8
+  Installing : 2:container-selinux-2.107-3.el7.noarch                                         1/8
+  Installing : containerd-1.3.9-2.el7.x86_64                                                  2/8
+  Installing : libnet-1.1.6-7.el7.x86_64                                                      3/8
+  Installing : docker-cli-19.03.11.ol-8.el7.x86_64                                            4/8
+  Installing : protobuf-c-1.0.2-3.el7.x86_64                                                  5/8
+  Installing : criu-3.12-2.el7.x86_64                                                         6/8
+  Installing : runc-1.0.0-19.rc5.git4bb1fe4.0.4.el7.x86_64                                    7/8
+  Installing : docker-engine-19.03.11.ol-8.el7.x86_64                                         8/8
 xfs_info: cannot open /var/lib: Is a directory
-  Verifying  : protobuf-c-1.0.2-3.el7.x86_64                                                           1/8
-  Verifying  : criu-3.12-2.el7.x86_64                                                                  2/8
-  Verifying  : runc-1.0.0-19.rc5.git4bb1fe4.0.4.el7.x86_64                                             3/8
-  Verifying  : docker-cli-19.03.11.ol-8.el7.x86_64                                                     4/8
-  Verifying  : 2:container-selinux-2.107-3.el7.noarch                                                  5/8
-  Verifying  : docker-engine-19.03.11.ol-8.el7.x86_64                                                  6/8
-  Verifying  : containerd-1.3.9-2.el7.x86_64                                                           7/8
-  Verifying  : libnet-1.1.6-7.el7.x86_64                                                               8/8
+  Verifying  : protobuf-c-1.0.2-3.el7.x86_64                                                  1/8
+  Verifying  : criu-3.12-2.el7.x86_64                                                         2/8
+  Verifying  : runc-1.0.0-19.rc5.git4bb1fe4.0.4.el7.x86_64                                    3/8
+  Verifying  : docker-cli-19.03.11.ol-8.el7.x86_64                                            4/8
+  Verifying  : 2:container-selinux-2.107-3.el7.noarch                                         5/8
+  Verifying  : docker-engine-19.03.11.ol-8.el7.x86_64                                         6/8
+  Verifying  : containerd-1.3.9-2.el7.x86_64                                                  7/8
+  Verifying  : libnet-1.1.6-7.el7.x86_64                                                      8/8
 
 Installed:
   docker-engine.x86_64 0:19.03.11.ol-8.el7
 
 Dependency Installed:
-  container-selinux.noarch 2:2.107-3.el7        containerd.x86_64 0:1.3.9-2.el7 criu.x86_64 0:3.12-2.el7 docker-cli.x86_64 0:19.03.11.ol-8.el7 libnet.x86_64 0:1.1.6-7.el7 protobuf-c.x86_64 0:1.0.2-3.el7
+  container-selinux.noarch 2:2.107-3.el7
+  containerd.x86_64 0:1.3.9-2.el7
+  criu.x86_64 0:3.12-2.el7
+  docker-cli.x86_64 0:19.03.11.ol-8.el7
+  libnet.x86_64 0:1.1.6-7.el7
+  protobuf-c.x86_64 0:1.0.2-3.el7
   runc.x86_64 0:1.0.0-19.rc5.git4bb1fe4.0.4.el7
 
 Complete!
@@ -148,5 +153,5 @@ Hint: Some lines were ellipsized, use -l to show in full.
 <code></pre>
 <p>&nbsp;</p>
 <p><strong><font size="4">5. Docker 관리</font></strong></p>
-<pre class="highlight"><code>[root@docker-server ~]# systemctl enable docker.service  # Docker Daemon 시작
+<pre class="highlight"><code>[root@docker-server ~]# systemctl enable docker.service  # 부팅시에 자동 Docker Daemon 시작
 <code></pre>
