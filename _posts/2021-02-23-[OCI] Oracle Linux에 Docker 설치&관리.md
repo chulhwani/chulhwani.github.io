@@ -623,6 +623,7 @@ Deleted: sha256:03901b4a2ea88eeaad62dbe59b072b28b6efa00491962b8741081c5df50c65e0
 <b># Docker Image 확인</b>
 [root@docker-server hostname_finder]# docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
 </code></pre>
 </div>
 </div>
