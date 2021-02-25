@@ -78,7 +78,14 @@ git commit -m "first commit"
 git remote add origin https://github.com/chulhwani/git-test.git
 git push -u origin master
 
-git remote set-url origin https://chulhwani@github.com/chulhwani/git-test.git
+<Pull>
+git pull origin master
+
+<Push>
+git status
+git add .
+git commit -m "message"
+git push origin +master
 
 git remote -v
 
