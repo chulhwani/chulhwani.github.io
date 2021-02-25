@@ -86,6 +86,14 @@ git log
 git log --all
 git diff
 git checkout master
+
+git clone [url]
+git branch [name]
+git checkout [name]
+git merge [name]
+git rebase master
+git branch -d [name]
+
 </code></pre>
 </div>
 </div>
