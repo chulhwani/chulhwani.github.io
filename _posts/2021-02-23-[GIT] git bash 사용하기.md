@@ -78,10 +78,10 @@ git commit -m "first commit"
 git remote add origin https://github.com/chulhwani/git-test.git
 git push -u origin master
 
-<Pull>
+-Pull
 git pull origin master
 
-<Push>
+-Push
 git status
 git add .
 git commit -m "message"
