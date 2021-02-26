@@ -11,12 +11,13 @@ Type `help` for more info.
 
 chul_hwan_@cloudshell:~ (ap-seoul-1)$ oci ce cluster create-kubeconfig --cluster-id ocid1.cluster.oc1.ap-seoul-1.aaaaaaaaae3dkmzxgi2gkndcgq2teyrrmfqtcm3emy2dkzjwmcygmnrwmfsd --file $HOME/.kube/config --region ap-seoul-1 --token-version 2.0.0 
 New config written to the Kubeconfig file /home/chul_hwan_/.kube/config
+
+<b># OKE Cluster 정보 확인</b>
 chul_hwan_@cloudshell:~ (ap-seoul-1)$ kubectl cluster-info
 Kubernetes master is running at https://192.29.29.118:6443
 CoreDNS is running at https://192.29.29.118:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
 
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
-chul_hwan_@cloudshell:~ (ap-seoul-1)$ 
 </code></pre>
 </div>
 </div>
@@ -43,7 +44,8 @@ PATH에 "/usr/local/bin" 추가
 
 [root@docker-server ~]# oci ce cluster create-kubeconfig --cluster-id ocid1.cluster.oc1.ap-seoul-1.aaaaaaaaae3dkmzxgi2gkndcgq2teyrrmfqtcm3emy2dkzjwmcygmnrwmfsd --file $HOME/.kube/config --region ap-seoul-1 --token-version 2.0.0
 
-[root@docker-server ~]# /usr/local/bin/kubectl cluster-info
+<b># OKE Cluster 정보 확인</b>
+[root@docker-server ~]# kubectl cluster-info
 Kubernetes control plane is running at https://192.29.29.118:6443
 CoreDNS is running at https://192.29.29.118:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
 
