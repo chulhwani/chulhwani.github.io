@@ -4,6 +4,7 @@
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight"><code>
+<img src ="./images/cluster_cloud_shell_access.jpg" alt ="cluster_cloud_shell_access">
 <b># Cloud Shell 실행</b>
 Welcome to Oracle Cloud Shell.
 
@@ -27,6 +28,7 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight"><code>
+<img src ="./images/cluster_Local Access.jpg" alt ="cluster_Local Access">
 [root@docker-server ~]# id
 uid=0(root) gid=0(root) groups=0(root) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
 
