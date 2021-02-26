@@ -101,7 +101,7 @@ git merge [name]
 git rebase master
 git branch -d [name]
 
- <img src ="./images/git_command.JPG" alt ="git_command">
+<img src ="./images/git_command.JPG" alt ="git_command">
 
 </code></pre>
 </div>
