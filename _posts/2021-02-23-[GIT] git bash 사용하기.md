@@ -100,12 +100,10 @@ git checkout [name]
 git merge [name]
 git rebase master
 git branch -d [name]
-
-<img src ="./images/git_command.JPG" alt ="git_command">
-
 </code></pre>
 </div>
 </div>
+<img src="./images/git_command.JPG" border="2">
 <p>&nbsp;</p>
 <strong><font size="4">참고 URL</font></strong>
 <pre class="highlight">
