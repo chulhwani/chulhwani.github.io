@@ -1,7 +1,7 @@
 <strong>1. Kubernetes Cluster 생성</strong>
 <p>&nbsp;</p>
 <strong>2-1. Access Cluster(Cloud Shell Access)</strong>
-<img src ="./images/cluster_cloud_shell_access.jpg" alt ="cluster_cloud_shell_access">
+<img src ="./images/cluster_cloud_shell_access.jpg" style="border:5 red">
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight"><code>
@@ -25,7 +25,7 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 </div>
 <p>&nbsp;</p>
 <strong>2-2. Access Cluster(Local Access)</strong>
-<img src ="./images/cluster_Local Access.jpg" alt ="cluster_Local Access">
+<img src ="./images/cluster_Local Access.jpg" style="border:5 red">
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight"><code>
