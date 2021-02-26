@@ -1,7 +1,7 @@
 <strong>1. Kubernetes Cluster 생성</strong>
 <p>&nbsp;</p>
 <strong>2-1. Access Cluster(Cloud Shell Access)</strong>
-<img data-action="zoom" src='{{ "./images/cluster_cloud_shell_access.jpg" | relative_url }}' alt='absolute'>
+<img src="./images/cluster_cloud_shell_access.jpg" border="2">
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight"><code>
