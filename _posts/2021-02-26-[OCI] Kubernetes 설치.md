@@ -1,10 +1,10 @@
 <strong>1. Kubernetes Cluster 생성</strong>
 <p>&nbsp;</p>
 <strong>2-1. Access Cluster(Cloud Shell Access)</strong>
-<img src ="./images/cluster_cloud_shell_access.jpg" style="border:5 red">
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight"><code>
+<img src ="./images/cluster_cloud_shell_access.jpg" style="border:5 red">
 <b># Cloud Shell 실행</b>
 Welcome to Oracle Cloud Shell.
 
@@ -25,10 +25,10 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 </div>
 <p>&nbsp;</p>
 <strong>2-2. Access Cluster(Local Access)</strong>
-<img src ="./images/cluster_Local Access.jpg" style="border:5 red">
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight"><code>
+<img src ="./images/cluster_Local Access.jpg" style="border:5 red">
 [root@docker-server ~]# id
 uid=0(root) gid=0(root) groups=0(root) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
 
