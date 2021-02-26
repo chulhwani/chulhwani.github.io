@@ -4,6 +4,7 @@
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight"><code>
+<b># Cloud Shell 실행</b>
 Welcome to Oracle Cloud Shell.
 
 Your Cloud Shell machine comes with 5GB of storage for your home directory. Your Cloud Shell (machine and home directory) are located in: South Korea Central (Seoul).
