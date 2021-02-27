@@ -26,6 +26,7 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 <p>&nbsp;</p>
 <strong>2-2. Access Cluster(Local Access)</strong>
 <img src ="./images/cluster_Local Access.jpg" border="2">
+![](images/cluster_Local Access.jpg)
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight"><code>
@@ -56,3 +57,11 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 </code></pre>
 </div>
 </div>
+<p>&nbsp;</p>
+<strong><font size="4">참고 URL</font></strong>
+<pre class="highlight">
+<a href="https://kubernetes.io/ko/docs/home/" target="_blank">쿠버네티스(홈) 문서</a>
+<a href="https://kubernetes.io/ko/docs/tutorials/kubernetes-basics/" target="_blank">쿠버네티스 기초 학습</a>
+<a href="https://m.post.naver.com/viewer/postView.nhn?volumeNo=14749083&memberNo=36733075&vType=VERTICAL" target="_blank">초보자를 위한 쿠버네티스 (Kubernetes) 소개</a>
+<a href="https://mantics.tistory.com/m?fbclid=IwAR0ngYOwvsAFHeXoDDQ8YohdKPS3Jb6SWa_a3g9OpsLZ5VUdWBFWJQE-FSQ" target="_blank">진이의 쿠버네티스 이야기</a>
+</pre>
