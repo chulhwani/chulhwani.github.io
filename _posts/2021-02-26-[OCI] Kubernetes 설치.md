@@ -26,7 +26,7 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 <p>&nbsp;</p>
 <strong>2-2. Access Cluster(Local Access)</strong>
 <img src ="./images/cluster_Local Access.jpg" border="2">
-![](images/cluster_Local Access.jpg)
+<img src='{{ "/images/cluster_Local Access.jpg" | relative_url }}' alt='absolute'>
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight"><code>
