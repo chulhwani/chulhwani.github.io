@@ -64,4 +64,6 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 <a href="https://kubernetes.io/ko/docs/tutorials/kubernetes-basics/" target="_blank">쿠버네티스 기초 학습</a>
 <a href="https://m.post.naver.com/viewer/postView.nhn?volumeNo=14749083&memberNo=36733075&vType=VERTICAL" target="_blank">초보자를 위한 쿠버네티스 (Kubernetes) 소개</a>
 <a href="https://mantics.tistory.com/m?fbclid=IwAR0ngYOwvsAFHeXoDDQ8YohdKPS3Jb6SWa_a3g9OpsLZ5VUdWBFWJQE-FSQ" target="_blank">진이의 쿠버네티스 이야기</a>
+<a href="https://labs.play-with-k8s.com/" target="_blank">쿠버네티스 놀이터 - Play with Kubernetes</a>
+<a href="https://katacoda.com/courses/kubernetes/playground" target="_blank">쿠버네티스 놀이터 - O'REILLY katacoda</a>
 </pre>
