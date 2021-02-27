@@ -1,10 +1,10 @@
 <strong>1. Kubernetes Cluster 생성</strong>
 <p>&nbsp;</p>
 <strong>2-1. Access Cluster(Cloud Shell Access)</strong>
-1
+![](/images/cluster_cloud_shell_access.jpg)
+<!--
 <img src="./images/cluster_cloud_shell_access.jpg" border="2">
-2
-![](images/cluster_cloud_shell_access.jpg)
+-->
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight"><code>
@@ -28,12 +28,10 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 </div>
 <p>&nbsp;</p>
 <strong>2-2. Access Cluster(Local Access)</strong>
-1
-![](images/cluster_Local_Access.jpg)
-2
-<img src ="./images/cluster_Local Access.jpg" border="2">
-3
-<img data-action="zoom" src='{{ "/images/cluster_Local Access.jpg" | relative_url }}' alt='relative'>
+![](/images/cluster_Local_Access.jpg)
+<!--
+<img src ="./images/cluster_Local_Access.jpg" border="2">
+-->
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight"><code>
