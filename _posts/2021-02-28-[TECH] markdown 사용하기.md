@@ -1,6 +1,5 @@
 ---
-date: 2021-02-28
-category: [ techs ]
+category: techs
 ---
 
 이것은 헤더
