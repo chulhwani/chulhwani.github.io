@@ -103,7 +103,7 @@ git branch -d [name]
 </code></pre>
 </div>
 </div>
-<img src="./images/git_command.JPG" border="2">
+<img src="./images/git_command.jpg" border="2">
 <p>&nbsp;</p>
 <strong><font size="4">참고 URL</font></strong>
 <pre class="highlight">
