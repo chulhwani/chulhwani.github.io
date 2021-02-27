@@ -20,18 +20,5 @@
 설명에 나오는 모든 명칭은 한글로 되어 있습니다.  
 OCI 대시보드가 영문으로 보이는 분은 우측 상단의 지구본 아이콘을 눌러 한글로 변경하시면 됩니다.
 
-1
-
-![](/images/cluster_cloud_shell_access.jpg)
-
-2
-
-![](/images/cluster_cloud_shell_access.png)
-
-3
-
 ![](images/cluster_cloud_shell_access.jpg)
 
-4
-
-![](images/cluster_cloud_shell_access.png)
