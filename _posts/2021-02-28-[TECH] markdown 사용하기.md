@@ -1,5 +1,5 @@
 ---
-category: techs
+category: [ techs ]
 ---
 
 이것은 헤더
