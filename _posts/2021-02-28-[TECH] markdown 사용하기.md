@@ -11,5 +11,7 @@
 
 [마크다운? - 2](https://theorydb.github.io/envops/2019/05/22/envops-blog-how-to-use-md/#%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%A5%BC-%EC%89%BD%EA%B2%8C-%EC%97%85%EB%A1%9C%EB%93%9C-%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95)
 
+[마크다운 샘플](https://github.com/jonggyoukim/hands-on-oke/edit/master/setup.md)
+
 [markdown editor](https://jbt.github.io/markdown-editor/)
 
