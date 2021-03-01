@@ -1,17 +1,70 @@
 ---
-category: [ Tech ]
+category: [ Cloud ]
 ---
 
+<strong>1. GIT 다운로드(윈도우) 및 설치</strong>
+<pre class="highlight"><code>https://git-scm.com/
+</code></pre>
+<p>&nbsp;</p>
+<strong>2. GIT Config</strong>
+<div class="language-plaintext highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code><b># GIT 초기화(프로젝트 버전 관리 시작)</b>
+cshim@CSHIM-KR MINGW64 /d/DOWNLOADs/GIT
+$ git init
+Initialized empty Git repository in D:/DOWNLOADs/GIT/.git/<br>
 
+cshim@CSHIM-KR MINGW64 /d/DOWNLOADs/GIT (master)
+$ git config --global user.name "chulhwani"
 
-본문...
+cshim@CSHIM-KR MINGW64 /d/DOWNLOADs/GIT (master)
+$ git config --global user.email "chulhwani@gmail.com"
 
-# 참고 URL
-[마크다운? - 1](http://gjchoi.github.io/env/Kramdown(%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4)-%EC%82%AC%EC%9A%A9%EB%B2%95/)
+cshim@CSHIM-KR MINGW64 /d/DOWNLOADs/GIT (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+credential.helper=manager-core
+pull.rebase=false
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=chulhwani
+user.email=chulhwani@gmail.com
+core.editor=code
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+difftool.sourcetree.cmd='' "$LOCAL" "$REMOTE"
+mergetool.sourcetree.cmd=''
+mergetool.sourcetree.trustexitcode=true
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
 
-[마크다운? - 2](https://theorydb.github.io/envops/2019/05/22/envops-blog-how-to-use-md/#%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%A5%BC-%EC%89%BD%EA%B2%8C-%EC%97%85%EB%A1%9C%EB%93%9C-%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95)
+cshim@CSHIM-KR MINGW64 /d/DOWNLOADs/GIT (master)
+$ git status
+On branch master
 
-[마크다운 샘플](https://github.com/jonggyoukim/hands-on-oke/edit/master/setup.md)
+No commits yet
 
-[markdown editor](https://jbt.github.io/markdown-editor/)
+nothing to commit (create/copy files and use "git add" to track)
 
+<b># Visual Studio Code 호출</b>
+cshim@CSHIM-KR MINGW64 /d/DOWNLOADs/GIT (master)
+$ code .
+</code></pre>
+</div>
+</div>
+<p>&nbsp;</p>
