@@ -1,5 +1,5 @@
 ---
 layout: category
-title: nsight
+title: Insight
 
 ---
