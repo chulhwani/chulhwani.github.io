@@ -17,11 +17,12 @@ layout: compress
         <div class="post_wrapper animated fadeIn">
             <div class="content">
                 <div class="post-title">
+<!--                    
                     <h1>{{ page.title }}</h1>
- <!--                   <a class="btn zoombtn" href="{{site.url}}">   -->
-                        <a class="btn zoombtn">
+                        <a class="btn zoombtn" href="{{site.url}}">
                         <i class="fa fa-home"></i>
                     </a>
+-->
                 </div>
                 <div class="post-list">
                     {% assign category = page.title %}
@@ -47,7 +48,6 @@ layout: compress
         
     </header>
     {% include scripts.html %}
-    <script src="{{ site.url }}/assets/js/wow.min.js"></script>
     <script type="text/javascript">(new WOW).init();</script>
 </body>
 </html>
