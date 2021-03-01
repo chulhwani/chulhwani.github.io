@@ -1,3 +1,8 @@
+---
+category: [ OCI ]
+---
+
+
 <p></p>
 <p><strong>1. To Installation the CLI</strong></p>
 <p>MacOS, Linux, and Unix</p>
