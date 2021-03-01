@@ -1,5 +1,5 @@
 ---
-category: [ Clouds ]
+category: [ Cloud ]
 ---
 
 <strong>1. GIT 다운로드(윈도우) 및 설치</strong>
