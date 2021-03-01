@@ -1,3 +1,7 @@
+---
+category: [ Clouds ]
+---
+
 <strong>1. Kubernetes Cluster 생성</strong>
 <p>&nbsp;</p>
 <strong>2-1. Access Cluster(Cloud Shell Access)</strong>
