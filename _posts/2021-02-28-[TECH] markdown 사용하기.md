@@ -1,5 +1,5 @@
 ---
-category: [ techs ]
+category: [ Techs ]
 ---
 
 
