@@ -1,3 +1,7 @@
+---
+category: [ OCI ]
+---
+
 <p><strong>OCI Storage</strong><strong>로 대용량(5GB이상) 파일 upload</strong></p>
 <p>&nbsp;</p>
 <p><strong>oci os bucket get -ns skstoa2018 --bucket-name datapump</strong></p>
