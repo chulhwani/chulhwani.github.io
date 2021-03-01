@@ -1,3 +1,7 @@
+---
+category: [ Clouds ]
+---
+
 <strong>1. GIT 다운로드(윈도우) 및 설치</strong>
 <pre class="highlight"><code>https://git-scm.com/
 </code></pre>
