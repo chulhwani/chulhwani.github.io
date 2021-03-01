@@ -1,3 +1,7 @@
+---
+category: [ OCI ]
+---
+
 <p><strong>1. Yum Repository Update</strong></p>
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
