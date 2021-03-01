@@ -7,7 +7,6 @@ category: [ OCI ]
 <strong>2-1. Access Cluster(Cloud Shell Access)</strong>
 
 ![](/images/cluster_cloud_shell_access.jpg)
-
 <!--   !<img src="./images/cluster_cloud_shell_access.jpg" border="2">   -->
 <div class="language-plaintext highlighter-rouge">
 <div class="highlight">
@@ -32,6 +31,7 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 </div>
 <p>&nbsp;</p>
 <strong>2-2. Access Cluster(Local Access)</strong>
+
 ![](/images/cluster_Local_Access.jpg)
 <!--   <img src ="./images/cluster_Local_Access.jpg" border="2">   -->
 <div class="language-plaintext highlighter-rouge">
