@@ -17,7 +17,7 @@ comments: false
 {% for item in (0..site.categories.size) %}{% unless forloop.last %}
   {% capture this_word %}{{ categories_list[item] | strip_newlines }}{% endcapture %}
     <article>
-<!--    <a href="{{site.url}}/categories/{{this_word}}">   -->
+<!--    <a href="{{site.url}}/categories/{{this_word}}">   -->   <!-- Category Page의 Title 링크 disable 처리 -->
      <h2 id="{{ this_word }}" class="tag-heading">{{ this_word }}</h2>
     </a>
 	<ul>
