@@ -1,5 +1,5 @@
 ---
-category: [ Cloud ]
+category: [ OCI ]
 ---
 
 <strong>1. Kubernetes Cluster 생성</strong>
