@@ -11,7 +11,6 @@ layout: compress
     {% include header.html %}
 </head>
 <body>
-    {% include nav.html %}
     <!-- Header -->
     <header class="header" role="banner">
         <div class="post_wrapper animated fadeIn">
@@ -49,12 +48,3 @@ layout: compress
     <script type="text/javascript">(new WOW).init();</script>
 </body>
 </html>
-
-
-<!-- 카테고리
-{% for post in site.categories[page.category] %}
-    <a href="{{ post.url | absolute_url }}">
-      {{ post.title }}
-    </a>
-{% endfor %}
--->
