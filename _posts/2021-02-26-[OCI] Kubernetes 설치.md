@@ -1,5 +1,5 @@
 ---
-category: [ Clouds ]
+category: [ Cloud ]
 ---
 
 <strong>1. Kubernetes Cluster 생성</strong>
