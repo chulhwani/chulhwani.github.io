@@ -7,12 +7,21 @@ category: [ OCI ]
 OCI Tenancy 환경을 Activation(Provioning)을 위해서는
 고객이 받은 Activation Mail의 다음 절차에 따라 Action을 수행해야 합니다.
 
-![](/images/provisioning_01.png | width=200)
+<div style="width:150px; height:100px">
+
+![](/images/provisioning_01.png)
+</div>
 
 # 2. Account 와 Administrator 정보 인력
 
-![](/images/provisioning_02.png | width=200)
+<div style="width:150px; height:100px">
+
+![](/images/provisioning_02.png)
+</div>
 
 # 3. Activation 완료
 
-![](/images/provisioning_03.png | width=200)
+<div style="width:150px; height:100px">
+
+![](/images/provisioning_03.png)
+</div>
